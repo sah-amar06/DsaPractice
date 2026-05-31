@@ -1,0 +1,33 @@
+# Compiled Java files
+*.class
+
+# Packaged files
+*.jar
+*.war
+*.ear
+
+# Maven
+target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# Eclipse
+.settings/
+.project
+.classpath
+bin/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# JVM crash logs
+hs_err_pid*

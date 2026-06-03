@@ -30,6 +30,17 @@ public class ArrayIntro {
 			System.out.println(names);
 		}
 		
+		//Updating the values
+		name[4] = "Roshin";
+		
+		System.out.println(Arrays.toString(name));
+		
+		//Removing the element from the Array
+		name[3] = "";
+		System.out.println(Arrays.toString(name));
+		
+		System.out.println(name[6]);
+		
 
 	}
 

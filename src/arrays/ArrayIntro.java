@@ -39,7 +39,8 @@ public class ArrayIntro {
 		name[3] = "";
 		System.out.println(Arrays.toString(name));
 		
-		System.out.println(name[6]);
+		//System.out.println(name[6]); //java.lang.ArrayIndexOutOfBoundsException 
+										//Index 6 out of bounds for length 5
 		
 
 	}

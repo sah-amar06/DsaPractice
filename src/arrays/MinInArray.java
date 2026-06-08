@@ -3,47 +3,84 @@ package arrays;
 public class MinInArray {
 
 	public static void main(String[] args) {
-		int[] arr = {-10, 1,2,3,-400,5,6,7,8,9,-20};
+		int[] arr = { -10, 1, 2, 3, -400, 5, 6, 7, 8, 9, -20 };
 		System.out.println(minArray(arr));
 		System.out.println(minInRange(arr, 2, 6));
-		
-		
+		System.out.println(minimum(arr));
+		System.out.println(minimumInRange(arr, 5, 10));
+
 	}
-	
+
 	public static int minArray(int[] arr) {
+
+		if (arr == null || arr.length == 0) {
+			return -1;
+		}
+		int min = arr[0];
+		for (int index = 1; index < arr.length; index++) {
+			if (arr[index] < min) {
+				min = arr[index];
+			}
+		}
+		return min;
+	}
+
+	public static int minInRange(int[] arr, int start, int end) {
+
+		if (arr == null || arr.length == 0) {
+			return -1;
+		}
+
+		if (start < 0 || end >= arr.length || start > end) {
+			return -1;
+		}
+
+		int min = arr[start];
+
+		for (int index = start + 1; index <= end; index++) {
+			if (arr[index] < min) {
+				min = arr[index];
+
+			}
+		}
+		return min;
+
+	}
+
+	public static int minimum(int[] arr) {
+
 		
 		if(arr == null || arr.length==0) {
 			return -1;
 		}
-		int min = arr[0];
-		for(int index=1; index<arr.length; index++ ) {
-			if(arr[index]<min) {
-				min = arr[index];
+		
+		int minIndex = 0;
+		
+		for(int index=0; index<arr.length; index++) {
+			if(arr[index] < arr[minIndex]) {
+				minIndex = index;
 			}
 		}
-		return min;
+		return minIndex;
 	}
 	
-	public static int minInRange(int[] arr, int start, int end) {
+	public static int minimumInRange(int[] arr, int start, int end) {
 		
-		if(arr==null || arr.length==0) {
+		if(arr == null || arr.length == 0) {
 			return -1;
 		}
 		
-		if(start<0 || end >=arr.length || start>end) {
+		if(start<0 || end >= arr.length || start >end ) {
 			return -1;
 		}
 		
-		int min = arr[start];
+		int min = start;
 		
 		for(int index= start+1; index<=end; index++) {
-			if(arr[index]<min) {
-				min = arr[index];
-				
+			if(arr[index] < arr[min]) {
+				min = index;
 			}
 		}
 		return min;
-		
 	}
-
 }

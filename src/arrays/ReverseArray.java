@@ -8,6 +8,7 @@ public class ReverseArray {
 		
 		int[] num = {1,2,3,4,5};
 		reverseArray(num);
+		System.out.println(Arrays.toString(num));
 		reverseTwoPointer(num);
 		System.out.println(Arrays.toString(num));
 

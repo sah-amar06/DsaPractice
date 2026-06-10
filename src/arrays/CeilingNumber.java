@@ -19,8 +19,7 @@ public class CeilingNumber {
 		}
 
 		/**
-		 * If the target is greater than the value of the last index in as ascending order
-		 * return -1;
+		 *  If target is greater than the greatest element, no ceiling exists.
 		 */
 		if (target > arr[arr.length - 1]) {
 			return -1;
@@ -54,8 +53,7 @@ public class CeilingNumber {
 			return -1;
 		}
 		/**
-		 * If the target is smaller than the value of the last index in the ascending order
-		 * return -1
+		 * If target is smaller than the smallest element, no ceiling exists.
 		 */
 		if(target< arr[arr.length-1]) {
 			return -1;

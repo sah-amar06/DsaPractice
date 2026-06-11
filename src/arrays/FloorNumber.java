@@ -11,6 +11,12 @@ public class FloorNumber {
 
 	}
 
+	/**
+	 * floor number is smaller than or equal to the target number
+	 * @param arr
+	 * @param target
+	 * @return
+	 */
 	public static int getFloor(int[] arr, int target) {
 
 		if (arr == null || arr.length == 0) {

@@ -12,7 +12,7 @@ public class FloorNumber {
 	}
 
 	/**
-	 * floor number is smaller than or equal to the target number
+	 * floor number is nearest smaller than or equal to the target number
 	 * @param arr
 	 * @param target
 	 * @return

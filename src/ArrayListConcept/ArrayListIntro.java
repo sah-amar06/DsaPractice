@@ -1,6 +1,8 @@
 package ArrayListConcept;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 public class ArrayListIntro {
 
 	public static void main(String[] args) {
@@ -36,5 +38,12 @@ public class ArrayListIntro {
 			System.out.println(e);
 		}
 	}
+	
+	public static void test() {
+		List<Object> list = Arrays.asList(1, 2, '3', 4, 5);
+		
+	}
+	
+	
 
 }

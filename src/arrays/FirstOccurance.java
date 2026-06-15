@@ -35,7 +35,7 @@ public class FirstOccurance {
 			return -1;
 		}
 		
-		if(target > arr[arr.length-1]) {
+		if(target > arr[arr.length-1] || target < arr[0]) {
 			return -1;
 		}
 		
@@ -48,8 +48,9 @@ public class FirstOccurance {
 			
 			
 			if(arr[mid] == target) {
-				answer = mid;
-				end = mid-1;
+				answer = mid;  
+				// We found the first tagret element in the ascending sorted array (We have to check other target elemet is available in the array or not. If not return the answer)
+				end = mid-1;  //Because, all the other target element will be left side in ascending sorted array.
 			}else if(arr[mid]<target) {
 				start = mid+1;
 			}else {

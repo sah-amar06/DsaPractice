@@ -6,12 +6,15 @@ public class FirstAndLastPosition {
 
 	public static void main(String[] args) {
 		int[] nums = {1,2,7,8,9,7};
+		int[] unsorted = {3,5,6,7,8,1,-10, 11,3,5,6,6,9,99};
 		
 		int[] arr = {1,2,3,5,6,8,9,9,10,11,11,11,11,11,15, 18};
 		int[] ans = getFirstAndLastIndex(nums, 7);
 		System.out.println(Arrays.toString(ans));
 		int[] answer = getFirstAndLastOccurance(arr, 11);
 		System.out.println(Arrays.toString(answer));
+		int[] unsrted = getFirstAndLastIndex(unsorted, 3);
+		System.out.println(Arrays.toString(unsrted));
 
 	}
 	

@@ -40,9 +40,9 @@ public class FirstAnLastPositionDescendingArray {
 		
 		int ans[] = {-1,-1};
 		
-		ans[0] = search(arr, target, true);
+		ans[0] = searchOrderAgnostic(arr, target, true);
 		if(ans[0]!=-1) {
-			ans[1] = search(arr, target, false);
+			ans[1] = searchOrderAgnostic(arr, target, false);
 		}
 		
 		return ans;
@@ -72,6 +72,47 @@ public class FirstAnLastPositionDescendingArray {
 				end = mid-1;
 			}else {
 				start = mid+1;
+			}
+		}
+		return ans;
+	}
+	
+	
+	public static int searchOrderAgnostic(int[] arr, int target, boolean firstIndex) {
+		
+		if(arr == null || arr.length==0) {
+			return -1;
+		}
+		
+		int start =0; 
+		int end = arr.length-1;
+		int ans =-1;
+		
+		boolean isAscending = arr[0] < arr[arr.length-1];
+		
+		while(start<=end) {
+			int mid = start + (end-start)/2;
+			
+			if(arr[mid] == target) {
+				ans = mid;
+				
+				if(firstIndex) {
+					end = mid-1;
+				}else {
+					start = mid+1;
+				}
+			} else if(isAscending) {
+				if(arr[mid] <target) {
+					start = mid+1;
+				}else {
+					end = mid-1;
+				}
+			}else {
+				if(arr[mid]<target) {
+					end = mid-1;
+				}else {
+					start = mid+1;
+				}
 			}
 		}
 		return ans;

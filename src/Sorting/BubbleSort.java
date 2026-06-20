@@ -21,11 +21,20 @@ public class BubbleSort {
 	}
 	
 	
+	/**
+	 * If Array is sorted in ascending order. No further sorting operation will happen and directly come out from the loop
+	 * as if(!swaped) {
+				break;
+			}
+	 *Best T.C = O(n)
+	 *
+	 * @param arr
+	 */
 	public static void bubbleSortArray(int[] arr) {
 		
 		for (int i = 0; i < arr.length; i++) {
 			
-			boolean swaped = false;
+			boolean swapped = false;
 			
 			for (int j = 1; j < arr.length-i; j++) {
 				
@@ -33,30 +42,37 @@ public class BubbleSort {
 					int temp = arr[j];
 					arr[j] = arr[j-1];
 					arr[j-1] = temp;
-					swaped = true;
+					swapped = true;
 				}
 				
 			}
-			if(!swaped) {
+			if(!swapped) {
 				break;
 			}
 		}
 	}
 	
+	/**
+	 * If Array is sorted in Ascending order. It will perform the sorting operation to sort in descending order.
+	 * Best Time Complexity : O(n2)
+	 * If Array is sorted in descending order. No sorting will happen. 
+	 * Best T.C = O(n)
+	 * @param arr
+	 */
 	public static void bubbleSortArrayDescending(int[] arr) {
 		
 		for(int i=0; i<arr.length; i++) {
 			
-			boolean swaped = false;
+			boolean swapped = false;
 			for(int j=1; j<arr.length-i; j++) {
 				if(arr[j]>arr[j-1]) {
 					int temp = arr[j];
 					arr[j] = arr[j-1];
 					arr[j-1] =temp;
-					swaped = true;
+					swapped = true;
 				}
 			}
-			if(!swaped) {
+			if(!swapped) {
 				break;
 			}
 		}

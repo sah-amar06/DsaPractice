@@ -35,8 +35,9 @@ public class PeakMountainArray {
 	}
 	
 	/**
-	 * In brute force approach, initializing the index from 1 and checking that index is greater than the element available on the left side (index-1)
-	 * and element available on the right side(index+1). 
+	 * brute force approach, 
+	 * Iterate through the array from index 1 to arr.length - 2 and check whether
+	 * the current element is greater than both its left and right neighboring elements.
 	 * If the element at the current index is greater than the left and right side of the elements. 
 	 * Then we found the "peak" in the given "Mountain Array"
 	 * @param arr
@@ -54,8 +55,11 @@ public class PeakMountainArray {
 	}
 	
 	/**
-	 * Another approach: If the current element is greater than the element available on the right side.
-	 * Then that element is the peak in the mountain array(Because a Mountain Array has exactly one peak).
+	 * Since a valid mountain array contains exactly one peak, the peak element is
+	 * always the maximum element in the array.
+	 *
+	 * Iterate through the array and keep track of the index of the maximum element.
+	 * Return the index of the maximum element after the traversal.
 	 * @param arr
 	 * @return
 	 */

@@ -22,13 +22,20 @@ public class BubbleSort {
 	
 	
 	/**
-	 * If Array is sorted in ascending order. No further sorting operation will happen and directly come out from the loop
-	 * as if(!swaped) {
-				break;
-			}
-	 *Best T.C = O(n)
+	 * Sorts the array in ascending order using Bubble Sort.
 	 *
-	 * @param arr
+	 * During each pass, the largest unsorted element moves to its correct
+	 * position at the end of the array.
+	 *
+	 * If no swaps occur during a pass, the array is already sorted and
+	 * the algorithm terminates early.
+	 *
+	 * Best Time Complexity: O(n)
+	 * Average Time Complexity: O(n²)
+	 * Worst Time Complexity: O(n²)
+	 * Space Complexity: O(1)
+	 *
+	 * @param arr the array to be sorted
 	 */
 	public static void bubbleSortArray(int[] arr) {
 		
@@ -53,11 +60,20 @@ public class BubbleSort {
 	}
 	
 	/**
-	 * If Array is sorted in Ascending order. It will perform the sorting operation to sort in descending order.
-	 * Best Time Complexity : O(n2)
-	 * If Array is sorted in descending order. No sorting will happen. 
-	 * Best T.C = O(n)
-	 * @param arr
+	 * Sorts the array in descending order using Bubble Sort.
+	 *
+	 * During each pass, the smallest unsorted element moves towards the
+	 * end of the array, resulting in descending order.
+	 *
+	 * If the array is already sorted in descending order, no swaps occur,
+	 * so the algorithm terminates after the first pass.
+	 *
+	 * Best Time Complexity: O(n)
+	 * Average Time Complexity: O(n²)
+	 * Worst Time Complexity: O(n²)
+	 * Space Complexity: O(1)
+	 *
+	 * @param arr the array to be sorted
 	 */
 	public static void bubbleSortArrayDescending(int[] arr) {
 		

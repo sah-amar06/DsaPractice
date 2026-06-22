@@ -2,6 +2,7 @@ package Sorting;
 
 import java.util.Arrays;
 
+
 public class BubbleSort {
 	
 	public static void main(String[] args) {
@@ -13,10 +14,20 @@ public class BubbleSort {
 		System.out.println(Arrays.toString(nums));
 		
 		int[] arr = {1,2,3,4,5};
+		int[] arr1 = {2,4,6,9,1,3,10};
+		int[] arr2 = {-2,4,6,19,1,31,10,-99};
+		int[] arr3 = {9,41,22,91,10,3,101,-22};
+		
 		bubbleSortArray(arr);
 		System.out.println(Arrays.toString(arr));
 		bubbleSortArrayDescending(arr);
 		System.out.println(Arrays.toString(arr));
+		test(arr1);
+		System.out.println(Arrays.toString(arr1));
+		commonBubbleSortAlgo(arr2, false);
+		System.out.println("Sorted in descending order: "+Arrays.toString(arr2));
+		bubbleSortOptimized(arr3, true);
+		System.out.println("Sorted is Ascending order: "+Arrays.toString(arr3));
 		
 	}
 	
@@ -86,6 +97,83 @@ public class BubbleSort {
 					arr[j] = arr[j-1];
 					arr[j-1] =temp;
 					swapped = true;
+				}
+			}
+			if(!swapped) {
+				break;
+			}
+		}
+	}
+	
+	public static void test(int[] arr) {
+		
+		
+		for(int i=0; i<arr.length; i++) {
+			boolean swapped = false;
+			for(int j=1; j<arr.length; j++) {
+				if(arr[j]>arr[j-1]) {
+					int temp = arr[j];
+					arr[j] =arr[j-1];
+					arr[j-1] =temp;
+					swapped = true;
+					
+				}
+			
+			}
+			if(!swapped) {
+				break;
+			}
+		}
+		
+	}
+	
+	public static void commonBubbleSortAlgo(int[] arr, boolean ascending) {
+		
+		if(ascending) {
+			for(int i=0; i<arr.length; i++) {
+				boolean swapped = false;
+				for(int j=1; j<arr.length-i;j++) {
+					if(arr[j]<arr[j-1]) {
+						int temp = arr[j];
+						arr[j] =arr[j-1];
+						arr[j-1] =temp;
+						swapped = true;
+					}
+				}
+				if(!swapped){
+					break;
+				}
+			}
+		}else {
+			for(int i=0;i<arr.length; i++) {
+				boolean swapped = false;
+				for(int j=1; j<arr.length-i; j++) {
+					if(arr[j]>arr[j-1]) {
+						int temp = arr[j];
+						arr[j] =arr[j-1];
+						arr[j-1] =temp;
+						swapped = true;
+					}
+				}
+				if(!swapped) {
+					break;
+				}
+			}
+			
+		}
+	}
+	
+	public static void bubbleSortOptimized(int[] arr, boolean isAscending) {
+		
+		for(int i=0; i<arr.length; i++) {
+			boolean swapped = false;
+			for(int j=1; j<arr.length-i; j++) {
+				if((isAscending && arr[j]<arr[j-1]) || (!isAscending && arr[j]>arr[j-1])) {
+					int temp = arr[j];
+					arr[j] =arr[j-1];
+					arr[j-1] =temp;
+					swapped = true;
+					
 				}
 			}
 			if(!swapped) {

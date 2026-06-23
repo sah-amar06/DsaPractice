@@ -27,7 +27,7 @@ public class BubbleSort {
 		commonBubbleSortAlgo(arr2, false);
 		System.out.println("Sorted in descending order: "+Arrays.toString(arr2));
 		bubbleSortOptimized(arr3, true);
-		System.out.println("Sorted is Ascending order: "+Arrays.toString(arr3));
+		System.out.println("Sorted in Ascending order: "+Arrays.toString(arr3));
 		
 	}
 	

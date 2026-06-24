@@ -10,7 +10,7 @@ public class BuildPermutationArray {
 		//https://leetcode.com/problems/build-array-from-permutation/description/
 		
 		int[] nums = {0,2,1,5,3,4};
-		//System.out.println(Arrays.toString(buildPermutationArray(nums)));
+		System.out.println(Arrays.toString(buildPermutationArray(nums)));
 		int[] nums1 = {5,0,1,2,3,4};
 		System.out.println(Arrays.toString(buildPermutationArray(nums1)));
 
@@ -22,11 +22,15 @@ public class BuildPermutationArray {
 		
 		for(int i=0; i<arr.length; i++) {
 			ans[i] = arr[arr[i]];
-			//Dry run: int[] nums1 = {5,0,1,2,3,4};
-			//i=0;
-			//ans[0] = arr[arr[0]];
-			//ans[0] = arr[5];
-			//ans[0] = 4;
+		/**
+			* Dry run: int[] nums1 = {5,0,1,2,3,4};
+			* i=0;
+			* ans[0] = arr[arr[0]];
+			* ans[0] = arr[5];
+			* ans[0] = 4;
+			* ans = [4,-,-,-,-,-];
+			
+		*/
  		}
 		return ans;
 	}

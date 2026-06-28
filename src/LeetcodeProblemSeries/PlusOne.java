@@ -18,6 +18,9 @@ public class PlusOne {
 		
 		int[] num3 = {1,2,3,4,5};
 		System.out.println(Arrays.toString(plusOneOptimal(num3)));
+	
+		int[] num4 = {1,2,3,9,9};
+		System.out.println(Arrays.toString(plusOneOptimal(num4)));
 		
 		
 

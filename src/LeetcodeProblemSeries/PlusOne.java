@@ -10,20 +10,20 @@ public class PlusOne {
 
 		int[] num = { 1, 2, 3 };
 		//getPlusOne(num);
-		System.out.println(Arrays.toString(getPlusOne(num)));
+		System.out.println(Arrays.toString(plusOneBruteForce(num)));
 		int[] num1 = {9,9};
-		System.out.println(Arrays.toString(plusOneOptimal(num1)));
+		System.out.println(Arrays.toString(plusOneUsingInteger(num1)));
 		int[] num2 = {9,9,9,9,9,9,9,9,9,9,9,9};
-		System.out.println(Arrays.toString(plusOneMostOptimal(num2)));
+		System.out.println(Arrays.toString(plusOneOptimal(num2)));
 		
 		int[] num3 = {1,2,3,4,5};
-		System.out.println(Arrays.toString(plusOneMostOptimal(num3)));
+		System.out.println(Arrays.toString(plusOneOptimal(num3)));
 		
 		
 
 	}
 
-	public static int[] getPlusOne(int[] arr) {
+	public static int[] plusOneBruteForce(int[] arr) {
 
 		int product = 0;
 		
@@ -53,7 +53,7 @@ public class PlusOne {
 
 	}
 	
-	public static int[] plusOneOptimal(int[] arr) {
+	public static int[] plusOneUsingInteger(int[] arr) {
 		
 		int product =0;
 		
@@ -85,7 +85,7 @@ public class PlusOne {
 		return ans;
 	}
 	
-	public static int[] plusOneMostOptimal(int[] arr) {
+	public static int[] plusOneOptimal(int[] arr) {
 		
 		for(int i=arr.length-1; i>=0; i--) {
 			

@@ -74,6 +74,7 @@ public class MaxConsecutiveOnes {
 		int count = 0;
 		int ans = 0;
 		
+		
 		/**
 		 * If nums==1, count++
 		 * Math.max(ans,count) -> It will return the greater among them.

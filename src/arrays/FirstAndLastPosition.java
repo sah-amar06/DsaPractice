@@ -22,7 +22,7 @@ public class FirstAndLastPosition {
 //		
 //		
 //		for(int index=0; index<arr.length; index++) {
-//			if(arr[index] == target && arr[arr.length-index] == target) {
+//			if(arr[index] == target && arr[arr.length-1-index] == target) {
 //				return new int[] {index, arr.length-index};
 //			}
 //		}

@@ -80,7 +80,7 @@ public class RotatedSortedArray {
 		}
 		
 		//case2: If arr[start]<arr[pivot]. means my target element is available before pivot.
-		//start = pivot -1;
+		//end = pivot -1;
 		
 		if(arr[0]<=target && target<=arr[pivot]) {
 			return binarySearch(arr, target, 0, pivot-1);

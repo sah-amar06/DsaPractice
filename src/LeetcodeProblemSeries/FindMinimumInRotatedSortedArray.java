@@ -15,6 +15,7 @@ public class FindMinimumInRotatedSortedArray {
 		System.out.println(getMinimumBruteForce(nums1));
 		System.out.println(getMinimumBruteForce(nums2));
 		System.out.println(getMinimumBS(nums2));
+		System.out.println(getMinimumBruteForce2(nums1));
 
 	}
 
@@ -77,6 +78,17 @@ public class FindMinimumInRotatedSortedArray {
 		}
 		return min;
 
+	}
+	
+	
+	public static int getMinimumBruteForce2(int[] nums) {
+		
+		int min = nums[0];
+		
+		for(int e:nums) {
+			min = Math.min(e, min);
+		}
+		return min;
 	}
 
 	public static int getMinimumBS(int[] arr) {

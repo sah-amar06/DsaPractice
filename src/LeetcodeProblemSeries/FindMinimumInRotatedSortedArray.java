@@ -23,10 +23,10 @@ public class FindMinimumInRotatedSortedArray {
 		int pivot = findPivot(arr);
 
 		if (pivot == -1) {
-			return arr[0];
+			return pivot;
 		}
 
-		return arr[pivot + 1];
+		return pivot+1;
 	}
 
 	/**

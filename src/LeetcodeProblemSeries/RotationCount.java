@@ -91,7 +91,7 @@ public class RotationCount {
 					return end-1;
 				}
 				end--;
-			}else if((arr[start]<arr[mid]) || arr[start] == arr[mid] && arr[mid]>arr[end]) {
+			}else if(((arr[start]<arr[mid])) || arr[start] == arr[mid] && arr[mid]>arr[end]) {
 				start = mid+1;
 			}else {
 				end = mid-1;

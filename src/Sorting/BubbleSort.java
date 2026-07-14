@@ -18,10 +18,10 @@ public class BubbleSort {
 		int[] arr2 = {-2,4,6,19,1,31,10,-99};
 		int[] arr3 = {9,41,22,91,10,3,101,-22};
 		
-		bubbleSortArray(arr);
-		System.out.println(Arrays.toString(arr));
-		bubbleSortArrayDescending(arr);
-		System.out.println(Arrays.toString(arr));
+//		bubbleSortArray(arr);
+//		System.out.println(Arrays.toString(arr));
+//		bubbleSortArrayDescending(arr);
+//		System.out.println(Arrays.toString(arr));
 		test(arr1);
 		System.out.println(Arrays.toString(arr1));
 		commonBubbleSortAlgo(arr2, false);

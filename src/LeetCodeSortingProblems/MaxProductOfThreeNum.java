@@ -33,7 +33,9 @@ public class MaxProductOfThreeNum {
 			}
 		}
 		int n = arr.length;
+		//Product of three largest number
 		int product1 = arr[n-1]*arr[n-2]*arr[n-3];
+		//Product of two smallest and one largest number.
 		int product2 = arr[0]*arr[1]*arr[n-1];
 		return Math.max(product1, product2);
 	}
